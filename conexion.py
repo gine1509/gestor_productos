@@ -1,8 +1,8 @@
-import mysql.connector
+import pymysql
 
 def conectar_db():
     try:
-        db = mysql.connector.connect(
+        db = pymysql.connect(
             host="localhost",
             user="root",
             password="",
@@ -10,5 +10,5 @@ def conectar_db():
             
         )
         return db
-    except mysql.connector.Error as err:
+    except pymysql.Error as err:
         print(f"Error: {err}")
